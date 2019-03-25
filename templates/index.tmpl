@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>The first app on Gin WAF </title>
+    <style type="text/css" media="screen">
+      @import url("/assets/css/index.css");
+    </style>
+</head>
+<body>
+<div class="wrap">
+<h1>Name List</h1>
+<form method="post" action="/new">
+    <input type="text" name="name" size="30" placeholder="Name">
+    <div class="bar">
+		<i></i>
+	</div>
+    <input type="number" name="age", placeholder="Age">
+    <input type="submit" value="Send">
+</form>
+<ul>
+    {{ range .people }}
+        <li>{{.Name}}: {{.Age}} yo</li>
+    {{ end }}
+</ul>
+</div>
+</body>
+</html>
